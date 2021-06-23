@@ -9,7 +9,7 @@ class Animal:
   
   def display_info(self):
 
-    print(f'{self.name}, Health: {self.health}, Mood: {self.mood}')
+    print(f'\n{self.name}, Health: {self.health}, Mood: {self.mood}')
     return self
   
   def feed(self):
@@ -87,9 +87,9 @@ zoo1.add_bird('owl').add_bird('penguin')
 while True:
 
 
-  print(f'Wellcome to {zoo1}')
+  print(f'\nWellcome to {zoo1}\n')
 
-  response = input('1: Add Ape \n2: Add Feline \n3: Add Bird \n4: Feed Animal \n5: Show Zoo Info \n0: Exit \n')
+  response = input('1: Add Ape \n2: Add Feline \n3: Add Bird \n4: Feed Animal \n5: Zoo Info \n0: Exit \n')
 
   if response == '0':
 
@@ -97,17 +97,21 @@ while True:
 
   elif response == '1':
 
-    zoo1.add_ape(input('Ape name:'))
+    apeName = input('\nApe name: ')
+    zoo1.add_ape(apeName)
+    print(f'\n{apeName} is now part of our zoo!\n')
 
   elif response == '2':
 
-    print('Feline name:')
-    zoo1.add_feline(input())
+    felineName = input('\nFeline name: ')
+    zoo1.add_feline(felineName)
+    print(f'\n{felineName} is now part of our zoo!\n')
 
   elif response == '3':
 
-    print('Bird name:')
-    zoo1.add_bird(input())
+    birdName = input('\nBird name: ')
+    zoo1.add_bird(birdName)
+    print(f'\n{birdName} is now part of our zoo!\n')
 
   elif response == '4':
     for i in range(len(zoo1.animals)):
