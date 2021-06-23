@@ -27,7 +27,7 @@ class Ape(Animal):
   def feed(self):
 
     self.health += 5
-    self.mood += 5
+    self.mood += 15
       
       # elif food == 'banana' or 'peanut':
       #   self.health +=10
@@ -39,6 +39,11 @@ class Ape(Animal):
 class Bird(Animal):
   def __init__(self, name, age=1, health=80, mood=70, doesFly=True):
     super().__init__(name, age, health, mood)
+
+  def feed(self):
+
+    self.health += 15
+    self.mood += 5
 
 
 class Feline(Animal):
@@ -115,6 +120,8 @@ while True:
     # import pdb; pdb.set_trace()
     zoo1.animals[which_one - 1].feed()
 
-
   elif response =='5':
     zoo1.print_all_info()
+  
+  else:
+    continue
